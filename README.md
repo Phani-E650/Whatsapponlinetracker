@@ -1,2 +1,2 @@
 # Whatsapponlinetracker
-It notifies when a required person is online . 
+It notifies by playing the audio when a required person is online . 
