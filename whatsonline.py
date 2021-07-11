@@ -3,6 +3,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
+from playsound import playsound
 import time
 import os
 
@@ -16,7 +17,7 @@ ONLINE_STATUS_LABEL = '/html/body/div/div[1]/div[1]/div[4]/div[1]/header/div[2]/
 browser = webdriver.Chrome('chromedriver.exe')
 
 #enter the person you want to track
-person="classmate"
+person="delete sanple"
 
 # Load Whatsapp Web page
 browser.get("https://web.whatsapp.com/")
@@ -43,6 +44,7 @@ while(True):
     try:
         browser.find_element_by_xpath(ONLINE_STATUS_LABEL)
         print("classmate is online")
+        playsound('audio.mp3')
         time.sleep(10)
     except:
         print("classmate is offline")
